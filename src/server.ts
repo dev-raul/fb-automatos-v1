@@ -1,6 +1,13 @@
-console.log('----TRABALHO DE AUTOMATOS----')
+console.log("----TRABALHO DE AUTOMATOS----");
 
+import question01 from "./01";
+import { Order } from "./02/order";
 
-import question01 from './01'
+// question01.a('ababbaba');
+// question01.b(2);
 
-question01.a('ababbaba');
+const order = new Order();
+order.handleNewOrder();
+order.handleApprovedOrder();
+order.handleCancelOrder();
+order.handleFinishOrder();
