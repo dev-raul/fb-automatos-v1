@@ -4,23 +4,23 @@ import { FinishOrder } from "./FinishOrder";
 export class DeliveOrder implements OrderState {
   constructor(private order: Order) {}
 
-  newOrder(): void {
-    console.error("O pedido já foi criado!");
+  newOrder(): string {
+    return "O pedido já foi criado!";
   }
-  approvedOrder(): void {
-    console.error("O pedido já está aprovado e está a caminho!");
+  approvedOrder(): string {
+    return "O pedido já está aprovado e está a caminho!";
   }
-  cancelOrder(): void {
-    console.error("O pedido não pode ser cancelado quando está a caminho!");
+  cancelOrder(): string {
+    return "O pedido não pode ser cancelado quando está a caminho!";
   }
-  carryOrder(): void {
-    console.error("O pedido não pode ser entregue!");
+  carryOrder(): string {
+    return "O pedido não pode ser entregue!";
   }
-  deliveOrder(): void {
-    console.error("O pedido já foi entregue!");
+  deliveOrder(): string {
+    return "O pedido já foi entregue!";
   }
-  finishOrder(): void {
+  finishOrder(): string {
     this.order.setState(new FinishOrder(this.order));
-    console.error("O pedido foi finalizado!");
+    return "O pedido foi finalizado!";
   }
 }

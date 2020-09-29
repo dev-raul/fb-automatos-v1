@@ -5,23 +5,23 @@ import { FinishOrder } from "./FinishOrder";
 export class CancelOrder implements OrderState {
   constructor(private order: Order) {}
 
-  newOrder(): void {
-    console.error("O pedido precisa ser finalizado!");
+  newOrder(): string {
+    return "O pedido precisa ser finalizado!";
   }
-  approvedOrder(): void {
-    console.error("O pedido precisa ser finalizado!");
+  approvedOrder(): string {
+    return "O pedido precisa ser finalizado!";
   }
-  cancelOrder(): void {
-    console.error("O pedido precisa ser finalizado!");
+  cancelOrder(): string {
+    return "O pedido precisa ser finalizado!";
   }
-  carryOrder(): void {
-    console.error("O pedido precisa ser finalizado!");
+  carryOrder(): string {
+    return "O pedido precisa ser finalizado!";
   }
-  deliveOrder(): void {
-    console.error("O pedido precisa ser finalizado!");
+  deliveOrder(): string {
+    return "O pedido precisa ser finalizado!";
   }
-  finishOrder(): void {
+  finishOrder(): string {
     this.order.setState(new FinishOrder(this.order));
-    console.error("Pedido finalizado!");
+    return "Pedido finalizado!";
   }
 }

@@ -1,13 +1,13 @@
 import { NewOrder } from "./NewOrder";
 
 export interface OrderState {
-  newOrder(): void;
-  approvedOrder(): void;
-  cancelOrder(): void;
-  carryOrder(): void;
-  carryOrder(): void;
-  deliveOrder(): void;
-  finishOrder(): void;
+  newOrder(): string;
+  approvedOrder(): string;
+  cancelOrder(): string;
+  carryOrder(): string;
+  carryOrder(): string;
+  deliveOrder(): string;
+  finishOrder(): string;
 }
 
 export class Order {
@@ -27,27 +27,27 @@ export class Order {
     this.state = state;
   }
 
-  handleNewOrder(): void {
+  handleNewOrder(): string {
     if (this.name === "Pedido") {
-      console.log("Criando um novo pedido!  ");
       this.state = new NewOrder(this);
+      return "Criando um novo pedido!";
     } else {
-      this.state.newOrder();
+      return this.state.newOrder();
     }
   }
-  handleApprovedOrder(): void {
-    this.state.approvedOrder();
+  handleApprovedOrder(): string {
+    return this.state.approvedOrder();
   }
-  handleCancelOrder(): void {
-    this.state.cancelOrder();
+  handleCancelOrder(): string {
+    return this.state.cancelOrder();
   }
-  handleCarryOrder(): void {
-    this.state.carryOrder();
+  handleCarryOrder(): string {
+    return this.state.carryOrder();
   }
-  handleDeliveOrder(): void {
-    this.state.deliveOrder();
+  handleDeliveOrder(): string {
+    return this.state.deliveOrder();
   }
-  handleFinishOrder(): void {
-    this.state.finishOrder();
+  handleFinishOrder(): string {
+    return this.state.finishOrder();
   }
 }

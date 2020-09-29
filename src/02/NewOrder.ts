@@ -5,24 +5,24 @@ import { CancelOrder } from "./CancelOrder";
 export class NewOrder implements OrderState {
   constructor(private order: Order) {}
 
-  newOrder(): void {
-    console.error("O pedido já foi criado!");
+  newOrder(): string {
+    return "O pedido já foi criado!";
   }
-  approvedOrder(): void {
+  approvedOrder(): string {
     this.order.setState(new ApprovedOrder(this.order));
-    console.log("O pedido foi aprovado!");
+    return "O pedido foi aprovado!";
   }
-  cancelOrder(): void {
+  cancelOrder(): string {
     this.order.setState(new CancelOrder(this.order));
-    console.log("O pedido foi cancelado!");
+    return "O pedido foi cancelado!";
   }
-  carryOrder(): void {
-    console.error("O pedido não pode ser enviado antes de ser aprovado!");
+  carryOrder(): string {
+    return "O pedido não pode ser enviado antes de ser aprovado!";
   }
-  deliveOrder(): void {
-    console.error("O pedido não pode ser entregue antes de ser enviado!");
+  deliveOrder(): string {
+    return "O pedido não pode ser entregue antes de ser enviado!";
   }
-  finishOrder(): void {
-    console.error("Você não pode finalizar o pedido!");
+  finishOrder(): string {
+    return "Você não pode finalizar o pedido!";
   }
 }
