@@ -25,4 +25,14 @@ export class NewOrder implements OrderState {
   finishOrder(): string {
     return "Você não pode finalizar o pedido!";
   }
+  //Métodos extras
+  backOrder(): string {
+    return "";
+  }
+  scheduleOrder(): string {
+    return "";
+  }
+  editOrder(): string {
+    return "";
+  }
 }

@@ -23,4 +23,15 @@ export class DeliveOrder implements OrderState {
     this.order.setState(new FinishOrder(this.order));
     return "O pedido foi finalizado!";
   }
+
+  //Métodos extras
+  backOrder(): string {
+    return "";
+  }
+  scheduleOrder(): string {
+    return "";
+  }
+  editOrder(): string {
+    return "";
+  }
 }

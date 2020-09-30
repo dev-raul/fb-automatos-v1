@@ -24,4 +24,15 @@ export class CancelOrder implements OrderState {
     this.order.setState(new FinishOrder(this.order));
     return "Pedido finalizado!";
   }
+
+  //Métodos extras
+  backOrder(): string {
+    return "";
+  }
+  scheduleOrder(): string {
+    return "";
+  }
+  editOrder(): string {
+    return "";
+  }
 }

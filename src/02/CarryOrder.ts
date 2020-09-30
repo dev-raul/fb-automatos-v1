@@ -23,4 +23,15 @@ export class CarryOrder implements OrderState {
   finishOrder(): string {
     return "Você não pode finalizar o pedido antes de ser entregue!";
   }
+
+  //Métodos extras
+  backOrder(): string {
+    return "";
+  }
+  scheduleOrder(): string {
+    return "";
+  }
+  editOrder(): string {
+    return "";
+  }
 }

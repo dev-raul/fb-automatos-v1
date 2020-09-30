@@ -8,6 +8,11 @@ export interface OrderState {
   carryOrder(): string;
   deliveOrder(): string;
   finishOrder(): string;
+
+  //Estados extras
+  backOrder(): string;
+  scheduleOrder(): string;
+  editOrder(): string;
 }
 
 export class Order {

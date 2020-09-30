@@ -24,4 +24,15 @@ export class FinishOrder implements OrderState {
   finishOrder(): string {
     return "O pedido já está finalizado!";
   }
+
+  //Métodos extras
+  backOrder(): string {
+    return "";
+  }
+  scheduleOrder(): string {
+    return "";
+  }
+  editOrder(): string {
+    return "";
+  }
 }

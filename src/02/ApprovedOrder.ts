@@ -25,4 +25,15 @@ export class ApprovedOrder implements OrderState {
   finishOrder(): string {
     return "Você não pode finalizar o pedido antes de cancelar!";
   }
+
+  //Métodos extras
+  backOrder(): string {
+    return "";
+  }
+  scheduleOrder(): string {
+    return "";
+  }
+  editOrder(): string {
+    return "";
+  }
 }

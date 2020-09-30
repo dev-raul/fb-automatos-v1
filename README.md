@@ -22,13 +22,13 @@
 
 <br/>
 
-## Para executar os teste:
+## Para executar os testes:
 
 <br/>
 
       yarn test
 
-#### Para executar todos os testes
+#### Testes individuais
 
 ### Questões:
 
@@ -37,3 +37,6 @@
   - b) `yarn test 01.b.spec.ts`
 - 2ª)
   - c) `yarn test 02.c.spec.ts`
+- 3ª)
+  - a) `yarn test 03.a.spec.ts`
+  - b) `yarn test 03.b.spec.ts`
